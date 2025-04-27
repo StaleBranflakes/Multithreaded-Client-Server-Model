@@ -9,10 +9,12 @@
 //import classes used for input and socket programming
 import java.io.*;
 import java.net.*;
+import java.util.*;
+
 
 public class MainClass {
 	
-	public void runServer()throws IOException{
+	public void ServerSetting()throws IOException{
 		
 		ServerSocket newSocketConnect = new ServerSocket(8080); //open socket and turn on with while loop
 		boolean serverStatus = true;
@@ -44,7 +46,10 @@ public class MainClass {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// Create the server instane and run
+		ServerSetting myServer = new ServerSetting();
+		myServer.run();
+		
 
 	}
 
